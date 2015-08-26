@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks App</title>
+    <link rel="stylesheet" href="./style/bootstrap.css"/><!--webpack 打包 的时候字体那里会报错-->
+</head>
+<body>
+
+    <div id="app">
+    	<h1>Tasks</h1>
+    	<input type="text" class="form-control" placeholder="new Task" v-model="newTask.title" v-on="keyup:pressedEnter | key 'enter' ">
+    	<ul class="list-group">
+    		<li class="list-group-item task" v-on="dblclick: startEditingTask(task)" v-class="completed : task.completed" v-repeat="task:tasks">
+    			<input type="checkbox" v-model="task.completed">
+    			{{task.title}}
+    			<button class="remove-btn pull-right" v-on="click: removeTask(task,$index)"><span class="glyphicon glyphicon-remove"></span></button>
+    		</li>
+
+    	</ul>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
