@@ -1,7 +1,7 @@
 
 var Vue = require('vue');
 
-//require('./style/bootstrap.css'); 为毛不行
+require('bootstrap/dist/css/bootstrap.min.css');
 require('./style/app.css');
 
 new Vue({

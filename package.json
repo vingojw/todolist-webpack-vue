@@ -4,18 +4,19 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "vue": "^0.12.10",
+    "bootstrap": "^3.3.5",
     "css-loader": "^0.15.6",
     "file-loader": "^0.8.4",
     "jshint-loader": "^0.8.3",
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
+    "vue": "^0.12.10",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1"
   },
   "scripts": {
     "start": "webpack-dev-server app.js",
-    "startinline": "webpack-dev-server --inline app.js"
+    "dev": "webpack-dev-server --inline app.js"
   },
   "author": "",
   "license": "ISC"
